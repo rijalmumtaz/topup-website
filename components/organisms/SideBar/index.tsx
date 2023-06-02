@@ -7,7 +7,6 @@ export default function SideBar() {
     <section className="sidebar">
       <div className="content pt-50 pb-30 ps-30">
         <Profile />
-        {/* kjasdlsajldjas */}
         <div className="menus">
           <MenuItem
             href="/member"
