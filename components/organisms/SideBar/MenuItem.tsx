@@ -13,7 +13,7 @@ interface MenuItemProps {
     | "rewards"
     | "setting"
     | "log-out";
-  active: boolean;
+  active?: boolean;
 }
 
 export default function MenuItem(props: Partial<MenuItemProps>) {
@@ -27,13 +27,14 @@ export default function MenuItem(props: Partial<MenuItemProps>) {
 
   return (
     <div className={classMenuItem}>
-      <Image
-        className="icon me-3"
-        src={`/icon/ic-menu-${img}.svg`}
-        width={25}
-        height={25}
-        alt="overview"
-      />
+      <div className="icon me-3">
+        <Image
+          src={`/icon/ic-menu-${img}.svg`}
+          width={25}
+          height={25}
+          alt="overview"
+        />
+      </div>
       <p className="item-title m-0">
         <Link
           legacyBehavior
