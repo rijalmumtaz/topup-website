@@ -61,7 +61,6 @@ export default function OverviewContent() {
               </thead>
               <tbody>
                 <TableRow />
-                {/* hapus */}
                 <tr className="align-middle text-center">
                   <th scope="row">
                     <img
