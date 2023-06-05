@@ -1,36 +1,56 @@
+import Image from "next/image";
 import React from "react";
+import cx from "classnames";
 
-export default function TableRow() {
+interface TableRowProps {
+  title: string;
+  category: "Desktop" | "Mobile";
+  item: number;
+  price: number;
+  status: "Success" | "Pending" | "Failed";
+  image: string;
+}
+
+export default function TableRow(props: TableRowProps) {
+  const { title, category, item, price, status, image } = props;
+
+  const statusClass = cx({
+    "float-start": true,
+    "icon-status": true,
+    pending: status === "Pending",
+    success: status === "Success",
+    failed: status === "Failed",
+  });
   return (
     <tr className="align-middle">
       <th scope="row">
-        <img
+        <Image
           className="float-start me-3 mb-lg-0 mb-3"
-          src="/img/overview-1.png"
-          width="80"
-          height="60"
-          alt=""
+          src={`/img/${image}.png`}
+          width={80}
+          height={60}
+          alt="game thumb"
         />
         <div className="game-title-header">
           <p className="game-title fw-medium text-start color-palette-1 m-0">
-            Mobile Legends: The New Battle 2021
+            {title}
           </p>
           <p className="text-xs fw-normal text-start color-palette-2 m-0">
-            Desktop
+            {category}
           </p>
         </div>
       </th>
       <td>
-        <p className="fw-medium color-palette-1 m-0">200 Gold</p>
+        <p className="fw-medium color-palette-1 m-0">{item} Gold</p>
       </td>
       <td>
-        <p className="fw-medium text-start color-palette-1 m-0">Rp 290.000</p>
+        <p className="fw-medium text-start color-palette-1 m-0">Rp {price}</p>
       </td>
       <td>
         <div>
-          <span className="float-start icon-status pending"></span>
+          <span className={statusClass}></span>
           <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-            Pending
+            {status}
           </p>
         </div>
       </td>
