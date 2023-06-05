@@ -2,7 +2,12 @@ import Footer from "./Footer";
 import MenuItem from "./MenuItem";
 import Profile from "./Profile";
 
-export default function SideBar() {
+interface SideBarProps {
+  activeMenu: "overview" | "settings" | "transactions";
+}
+
+export default function SideBar(props: SideBarProps) {
+  const { activeMenu } = props;
   return (
     <section className="sidebar">
       <div className="content pt-50 pb-30 ps-30">
@@ -12,12 +17,13 @@ export default function SideBar() {
             href="/member"
             img="overview"
             title="Overview"
-            active
+            active={activeMenu === "overview"}
           />
           <MenuItem
-            href="/member"
+            href="/member/transactions"
             img="transaction"
             title="Transactions"
+            active={activeMenu === "transactions"}
           />
           <MenuItem
             href="/member"
@@ -35,12 +41,13 @@ export default function SideBar() {
             title="Rewards"
           />
           <MenuItem
-            href="/member"
+            href="/member/edit-profile"
             img="setting"
             title="Settings"
+            active={activeMenu === "settings"}
           />
           <MenuItem
-            href="/member"
+            href="/member/sign-in"
             img="log-out"
             title="Log Out"
           />
