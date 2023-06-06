@@ -1,8 +1,10 @@
 import React from "react";
 
-interface InputProps {
+export interface InputProps {
   label: string;
 }
+
+// nativeProps, its like onChange, value, etc
 
 export default function Input(props: InputProps) {
   const { label, ...nativeProps } = props;
