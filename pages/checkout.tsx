@@ -9,7 +9,6 @@ export default function Checkout() {
       <div className="container-fluid">
         <div className="logo text-md-center text-start pb-50">
           <a
-          // sldl;akd;ada;a;
             className=""
             href="#"
           >
