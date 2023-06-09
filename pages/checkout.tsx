@@ -12,6 +12,7 @@ export default function Checkout() {
             className=""
             href="#"
           >
+          {/* asdasdad */}
             <Image
               src="/icon/logo.svg"
               width={60}
