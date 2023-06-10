@@ -20,7 +20,6 @@ export default function GameItem(props: GameItemProps) {
         legacyBehavior
         href="/detail"
       >
-        {/* commit */}
         <a>
           <div className="blur-sharp">
             <Image
