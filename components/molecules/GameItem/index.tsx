@@ -20,6 +20,7 @@ export default function GameItem(props: GameItemProps) {
         legacyBehavior
         href="/detail"
       >
+      // lalala
         <a>
           <div className="blur-sharp">
             <Image
