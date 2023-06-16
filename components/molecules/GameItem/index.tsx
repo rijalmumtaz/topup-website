@@ -21,6 +21,7 @@ export default function GameItem(props: GameItemProps) {
         href="/detail"
       >
         <a>
+        {/* hallo */}
           <div className="blur-sharp">
             <Image
               className="thumbnail"
