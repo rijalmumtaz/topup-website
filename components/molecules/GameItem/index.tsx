@@ -21,7 +21,6 @@ export default function GameItem(props: GameItemProps) {
         href="/detail"
       >
         <a>
-        {/* salkdalskd */}
           <div className="blur-sharp">
             <Image
               className="thumbnail"
